@@ -3,9 +3,7 @@ from joblib import dump, load
 from sklearn.naive_bayes import MultinomialNB
 import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
-from my_secret import DISCORD_BOT_TOKEN
-
-
+import argparse
 # ==================== load model ===========
 MODEL_FILE = "nb_model.joblib"
 VECTORIZER_FILE = "vect.joblib"
@@ -59,6 +57,13 @@ async def on_message(message):
         await message.channel.send(f'{mention_user_str} Your message is good')
 
 
+# ==================== CLI creation ==============
+parser = argparse.ArgumentParser()
+parser.add_argument("DISCORD_BOT_TOKEN", help="Your discord bot token" , type=str)
+args = parser.parse_args()
+# run the bot with the token 
+print(args.DISCORD_BOT_TOKEN)
+client.run(args.DISCORD_BOT_TOKEN)
+# ============================================
 
-client.run(DISCORD_BOT_TOKEN)
 
