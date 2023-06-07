@@ -1,5 +1,8 @@
 # DiscordSpamBot
 
+This is a group project for university assingment
+where we create discord bot to detect spam
+
 ## Dataset
 all data are in [data folder](./data/)
 
