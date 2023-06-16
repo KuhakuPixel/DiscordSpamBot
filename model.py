@@ -28,7 +28,6 @@ def model_predict_is_spam(model, vect , msg: str)-> bool:
     x_to_predict = pd.Series(data=[msg])
     x_to_predict_dtm = vect.transform(x_to_predict)
     predicted = model.predict(x_to_predict_dtm)
-    print(predicted)
     # predicted has to 1
     assert len(predicted) == 1
 

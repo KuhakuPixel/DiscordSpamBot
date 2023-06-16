@@ -37,4 +37,14 @@ will tell you how to create your own discord bot account and get the token
 ```
 python bot.py <YOUR DISCORD BOT TOKEN>
 ```
+### choosing model to use
+(default is naive bayes)
+```
+python bot.py <YOUR DISCORD BOT TOKEN> --model naiveBayes
+```
+
+```
+python bot.py <YOUR DISCORD BOT TOKEN> --model randomForest
+```
+
 

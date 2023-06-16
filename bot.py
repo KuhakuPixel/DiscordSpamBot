@@ -9,8 +9,6 @@ from model import get_model, ClassifierModelType, model_predict_is_spam
 # ==================== load vectorizer ===========
 VECTORIZER_FILE = "vect.joblib"
 vect = load(VECTORIZER_FILE)
-print(type(vect))
-
 
 def is_bad_msg(model, msg: str) -> bool:
     is_spam = model_predict_is_spam(model=model, vect=vect, msg=msg)
